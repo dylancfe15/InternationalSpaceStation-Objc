@@ -14,6 +14,8 @@
 		D5E39BC228DC1466002F6F9C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D5E39BC028DC1466002F6F9C /* LaunchScreen.storyboard */; };
 		D5E39BC528DC1466002F6F9C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D5E39BC428DC1466002F6F9C /* main.m */; };
 		D5E39BCF28DC1466002F6F9C /* InternationalSpaceStation_ObjcTests.m in Sources */ = {isa = PBXBuildFile; fileRef = D5E39BCE28DC1466002F6F9C /* InternationalSpaceStation_ObjcTests.m */; };
+		D5E39BEB28DCCD48002F6F9C /* MapView.m in Sources */ = {isa = PBXBuildFile; fileRef = D5E39BEA28DCCD48002F6F9C /* MapView.m */; };
+		D5E39BF028DFFBC2002F6F9C /* ISSLocationResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = D5E39BEF28DFFBC2002F6F9C /* ISSLocationResponse.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +50,11 @@
 		D5E39BCA28DC1466002F6F9C /* InternationalSpaceStation-ObjcTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "InternationalSpaceStation-ObjcTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D5E39BCE28DC1466002F6F9C /* InternationalSpaceStation_ObjcTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = InternationalSpaceStation_ObjcTests.m; sourceTree = "<group>"; };
 		D5E39BD428DC1466002F6F9C /* InternationalSpaceStation-ObjcUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "InternationalSpaceStation-ObjcUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D5E39BE928DCCCDB002F6F9C /* MapView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MapView.h; sourceTree = "<group>"; };
+		D5E39BEA28DCCD48002F6F9C /* MapView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MapView.m; sourceTree = "<group>"; };
+		D5E39BEC28DFF969002F6F9C /* MapViewUpdatable.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MapViewUpdatable.h; sourceTree = "<group>"; };
+		D5E39BEE28DFFA26002F6F9C /* ISSLocationResponse.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ISSLocationResponse.h; sourceTree = "<group>"; };
+		D5E39BEF28DFFBC2002F6F9C /* ISSLocationResponse.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ISSLocationResponse.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,8 +108,8 @@
 				D5E39BB328DC1464002F6F9C /* AppDelegate.m */,
 				D5E39BB528DC1464002F6F9C /* SceneDelegate.h */,
 				D5E39BB628DC1464002F6F9C /* SceneDelegate.m */,
-				D5E39BB828DC1464002F6F9C /* MapViewController.h */,
-				D5E39BB928DC1464002F6F9C /* MapViewController.m */,
+				D5E39BED28DFFA0D002F6F9C /* Models */,
+				D5E39BE728DCCB70002F6F9C /* Views */,
 				D5E39BBE28DC1466002F6F9C /* Assets.xcassets */,
 				D5E39BC028DC1466002F6F9C /* LaunchScreen.storyboard */,
 				D5E39BC328DC1466002F6F9C /* Info.plist */,
@@ -117,6 +124,35 @@
 				D5E39BCE28DC1466002F6F9C /* InternationalSpaceStation_ObjcTests.m */,
 			);
 			path = "InternationalSpaceStation-ObjcTests";
+			sourceTree = "<group>";
+		};
+		D5E39BE728DCCB70002F6F9C /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				D5E39BB828DC1464002F6F9C /* MapViewController.h */,
+				D5E39BB928DC1464002F6F9C /* MapViewController.m */,
+				D5E39BE828DCCC73002F6F9C /* Subviews */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		D5E39BE828DCCC73002F6F9C /* Subviews */ = {
+			isa = PBXGroup;
+			children = (
+				D5E39BEC28DFF969002F6F9C /* MapViewUpdatable.h */,
+				D5E39BE928DCCCDB002F6F9C /* MapView.h */,
+				D5E39BEA28DCCD48002F6F9C /* MapView.m */,
+			);
+			path = Subviews;
+			sourceTree = "<group>";
+		};
+		D5E39BED28DFFA0D002F6F9C /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				D5E39BEE28DFFA26002F6F9C /* ISSLocationResponse.h */,
+				D5E39BEF28DFFBC2002F6F9C /* ISSLocationResponse.m */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -252,6 +288,8 @@
 				D5E39BB428DC1464002F6F9C /* AppDelegate.m in Sources */,
 				D5E39BC528DC1466002F6F9C /* main.m in Sources */,
 				D5E39BB728DC1464002F6F9C /* SceneDelegate.m in Sources */,
+				D5E39BEB28DCCD48002F6F9C /* MapView.m in Sources */,
+				D5E39BF028DFFBC2002F6F9C /* ISSLocationResponse.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

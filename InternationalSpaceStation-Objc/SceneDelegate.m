@@ -16,11 +16,12 @@
 
 
 - (void)scene:(UIScene *)scene willConnectToSession:(UISceneSession *)session options:(UISceneConnectionOptions *)connectionOptions {
-    self.window = [[UIWindow alloc] initWithWindowScene:(UIWindowScene *)scene];
-    MapViewController * viewController = [[MapViewController alloc]init];
-    self.window.rootViewController = viewController;
 
-    [self.window makeKeyAndVisible];
+    MapViewController * viewController = [[MapViewController alloc]init];
+
+    _window = [[UIWindow alloc] initWithWindowScene:(UIWindowScene *)scene];
+    _window.rootViewController = viewController;
+    [_window makeKeyAndVisible];
 }
 
 
