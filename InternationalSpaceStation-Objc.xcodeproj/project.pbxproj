@@ -16,6 +16,8 @@
 		D5E39BCF28DC1466002F6F9C /* InternationalSpaceStation_ObjcTests.m in Sources */ = {isa = PBXBuildFile; fileRef = D5E39BCE28DC1466002F6F9C /* InternationalSpaceStation_ObjcTests.m */; };
 		D5E39BEB28DCCD48002F6F9C /* MapView.m in Sources */ = {isa = PBXBuildFile; fileRef = D5E39BEA28DCCD48002F6F9C /* MapView.m */; };
 		D5E39BF028DFFBC2002F6F9C /* ISSLocationResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = D5E39BEF28DFFBC2002F6F9C /* ISSLocationResponse.m */; };
+		D5E39BF428E00A1C002F6F9C /* MapViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D5E39BF328E00A1C002F6F9C /* MapViewModel.m */; };
+		D5E39BF828E00C99002F6F9C /* MapDataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = D5E39BF728E00C98002F6F9C /* MapDataManager.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +57,11 @@
 		D5E39BEC28DFF969002F6F9C /* MapViewUpdatable.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MapViewUpdatable.h; sourceTree = "<group>"; };
 		D5E39BEE28DFFA26002F6F9C /* ISSLocationResponse.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ISSLocationResponse.h; sourceTree = "<group>"; };
 		D5E39BEF28DFFBC2002F6F9C /* ISSLocationResponse.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ISSLocationResponse.m; sourceTree = "<group>"; };
+		D5E39BF228E009E1002F6F9C /* MapViewModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MapViewModel.h; sourceTree = "<group>"; };
+		D5E39BF328E00A1C002F6F9C /* MapViewModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MapViewModel.m; sourceTree = "<group>"; };
+		D5E39BF628E00BA1002F6F9C /* MapDataManaging.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MapDataManaging.h; sourceTree = "<group>"; };
+		D5E39BF728E00C98002F6F9C /* MapDataManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MapDataManager.m; sourceTree = "<group>"; };
+		D5E39BF928E00CDE002F6F9C /* MapDataManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MapDataManager.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -108,8 +115,10 @@
 				D5E39BB328DC1464002F6F9C /* AppDelegate.m */,
 				D5E39BB528DC1464002F6F9C /* SceneDelegate.h */,
 				D5E39BB628DC1464002F6F9C /* SceneDelegate.m */,
+				D5E39BF528E00B84002F6F9C /* DataManagers */,
 				D5E39BED28DFFA0D002F6F9C /* Models */,
 				D5E39BE728DCCB70002F6F9C /* Views */,
+				D5E39BF128E009B5002F6F9C /* ViewModels */,
 				D5E39BBE28DC1466002F6F9C /* Assets.xcassets */,
 				D5E39BC028DC1466002F6F9C /* LaunchScreen.storyboard */,
 				D5E39BC328DC1466002F6F9C /* Info.plist */,
@@ -153,6 +162,25 @@
 				D5E39BEF28DFFBC2002F6F9C /* ISSLocationResponse.m */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		D5E39BF128E009B5002F6F9C /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				D5E39BF228E009E1002F6F9C /* MapViewModel.h */,
+				D5E39BF328E00A1C002F6F9C /* MapViewModel.m */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		D5E39BF528E00B84002F6F9C /* DataManagers */ = {
+			isa = PBXGroup;
+			children = (
+				D5E39BF628E00BA1002F6F9C /* MapDataManaging.h */,
+				D5E39BF928E00CDE002F6F9C /* MapDataManager.h */,
+				D5E39BF728E00C98002F6F9C /* MapDataManager.m */,
+			);
+			path = DataManagers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -284,11 +312,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D5E39BF428E00A1C002F6F9C /* MapViewModel.m in Sources */,
 				D5E39BBA28DC1464002F6F9C /* MapViewController.m in Sources */,
 				D5E39BB428DC1464002F6F9C /* AppDelegate.m in Sources */,
 				D5E39BC528DC1466002F6F9C /* main.m in Sources */,
 				D5E39BB728DC1464002F6F9C /* SceneDelegate.m in Sources */,
 				D5E39BEB28DCCD48002F6F9C /* MapView.m in Sources */,
+				D5E39BF828E00C99002F6F9C /* MapDataManager.m in Sources */,
 				D5E39BF028DFFBC2002F6F9C /* ISSLocationResponse.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
