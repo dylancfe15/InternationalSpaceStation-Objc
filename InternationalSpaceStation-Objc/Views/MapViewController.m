@@ -6,8 +6,11 @@
 //
 
 #import "MapViewController.h"
+#import "MapViewModel.h"
 
 @implementation MapViewController
+
+MapViewModel *viewModel;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -26,6 +29,14 @@
         [_mapView.bottomAnchor constraintEqualToAnchor: self.view.bottomAnchor],
         [_mapView.trailingAnchor constraintEqualToAnchor: self.view.trailingAnchor]
     ]];
+
+    viewModel = [MapViewModel alloc];
+
+    [viewModel fetchISSLocation:^(ISSLocationResponse *response) {
+        [self.mapView updateLocation:response];
+    } onFailure:^(NSError *error) {
+        // TODO: Handle error
+    }];
 }
 
 @end

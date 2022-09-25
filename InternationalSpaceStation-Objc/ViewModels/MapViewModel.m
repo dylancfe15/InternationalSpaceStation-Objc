@@ -10,8 +10,10 @@
 
 @implementation MapViewModel
 
-- (void) fetchISSLocation:(void (^)(int *))successBlock onFailure:(void (^)(NSError *))failureBlock {
+- (void) fetchISSLocation:(void (^)(ISSLocationResponse *))successBlock onFailure:(void (^)(NSError *))failureBlock {
     _dataManager = [MapDataManager alloc];
+
+    [_dataManager fetchISSLocation:successBlock onFailure:failureBlock];
 }
 
 @end
