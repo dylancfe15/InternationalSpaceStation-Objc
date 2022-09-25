@@ -6,6 +6,8 @@
 //
 
 #import <XCTest/XCTest.h>
+#import "MapViewModel.h"
+#import "MockMapDataManager.h"
 
 @interface InternationalSpaceStation_ObjcTests : XCTestCase
 
@@ -13,23 +15,33 @@
 
 @implementation InternationalSpaceStation_ObjcTests
 
+MapViewModel *viewModel;
+XCTestExpectation *expectation;
+
 - (void)setUp {
-    // Put setup code here. This method is called before the invocation of each test method in the class.
+    viewModel = [MapViewModel alloc];
+    viewModel.dataManager = (MapDataManager*)[MockMapDataManager alloc];
 }
 
 - (void)tearDown {
-    // Put teardown code here. This method is called after the invocation of each test method in the class.
+    viewModel = nil;
 }
 
-- (void)testExample {
-    // This is an example of a functional test case.
-    // Use XCTAssert and related functions to verify your tests produce the correct results.
-}
+- (void) testFetchISSLocation {
+    expectation = [self expectationWithDescription:@"expectation"];
 
-- (void)testPerformanceExample {
-    // This is an example of a performance test case.
-    [self measureBlock:^{
-        // Put the code you want to measure the time of here.
+    [viewModel fetchISSLocation:^(ISSLocationResponse *response) {
+        XCTAssertEqual(response.message, @"success");
+
+        [expectation fulfill];
+    } onFailure:^(NSError *) {
+
+    }];
+
+    [self waitForExpectationsWithTimeout:3 handler:^(NSError * _Nullable error) {
+        if (error) {
+            NSLog(@"Timeout Error: %@", error);
+        }
     }];
 }
 

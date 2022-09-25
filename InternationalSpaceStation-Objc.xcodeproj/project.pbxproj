@@ -19,7 +19,8 @@
 		D5E39BF428E00A1C002F6F9C /* MapViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D5E39BF328E00A1C002F6F9C /* MapViewModel.m */; };
 		D5E39BFC28E0E596002F6F9C /* iss-now.json in Resources */ = {isa = PBXBuildFile; fileRef = D5E39BFB28E0E596002F6F9C /* iss-now.json */; };
 		D5E39BFD28E0E5A1002F6F9C /* MapDataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = D5E39BF728E00C98002F6F9C /* MapDataManager.m */; };
-		D5E39C0128E0E688002F6F9C /* MockDataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = D5E39C0028E0E688002F6F9C /* MockDataManager.m */; };
+		D5E39C0128E0E688002F6F9C /* MockMapDataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = D5E39C0028E0E688002F6F9C /* MockMapDataManager.m */; };
+		D5E39C0328E0EC31002F6F9C /* MockMapDataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = D5E39C0028E0E688002F6F9C /* MockMapDataManager.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -65,8 +66,8 @@
 		D5E39BF728E00C98002F6F9C /* MapDataManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MapDataManager.m; sourceTree = "<group>"; };
 		D5E39BF928E00CDE002F6F9C /* MapDataManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MapDataManager.h; sourceTree = "<group>"; };
 		D5E39BFB28E0E596002F6F9C /* iss-now.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "iss-now.json"; sourceTree = "<group>"; };
-		D5E39BFF28E0E5D8002F6F9C /* MockDataManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MockDataManager.h; sourceTree = "<group>"; };
-		D5E39C0028E0E688002F6F9C /* MockDataManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MockDataManager.m; sourceTree = "<group>"; };
+		D5E39C0028E0E688002F6F9C /* MockMapDataManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MockMapDataManager.m; sourceTree = "<group>"; };
+		D5E39C0228E0EBDF002F6F9C /* MockMapDataManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MockMapDataManager.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -201,8 +202,8 @@
 		D5E39BFE28E0E5B5002F6F9C /* DataManagers */ = {
 			isa = PBXGroup;
 			children = (
-				D5E39BFF28E0E5D8002F6F9C /* MockDataManager.h */,
-				D5E39C0028E0E688002F6F9C /* MockDataManager.m */,
+				D5E39C0028E0E688002F6F9C /* MockMapDataManager.m */,
+				D5E39C0228E0EBDF002F6F9C /* MockMapDataManager.h */,
 			);
 			path = DataManagers;
 			sourceTree = "<group>";
@@ -341,6 +342,7 @@
 				D5E39BBA28DC1464002F6F9C /* MapViewController.m in Sources */,
 				D5E39BB428DC1464002F6F9C /* AppDelegate.m in Sources */,
 				D5E39BC528DC1466002F6F9C /* main.m in Sources */,
+				D5E39C0328E0EC31002F6F9C /* MockMapDataManager.m in Sources */,
 				D5E39BB728DC1464002F6F9C /* SceneDelegate.m in Sources */,
 				D5E39BEB28DCCD48002F6F9C /* MapView.m in Sources */,
 				D5E39BF028DFFBC2002F6F9C /* ISSLocationResponse.m in Sources */,
@@ -352,7 +354,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D5E39BFD28E0E5A1002F6F9C /* MapDataManager.m in Sources */,
-				D5E39C0128E0E688002F6F9C /* MockDataManager.m in Sources */,
+				D5E39C0128E0E688002F6F9C /* MockMapDataManager.m in Sources */,
 				D5E39BCF28DC1466002F6F9C /* InternationalSpaceStation_ObjcTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

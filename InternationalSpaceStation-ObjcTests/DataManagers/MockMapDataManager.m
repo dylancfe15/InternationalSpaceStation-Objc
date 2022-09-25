@@ -1,13 +1,13 @@
 //
-//  MockDataManager.m
+//  MockMapDataManager.m
 //  InternationalSpaceStation-ObjcTests
 //
 //  Created by Difeng Chen on 9/25/22.
 //
 
-#import "MockDataManager.h"
+#import "MockMapDataManager.h"
 
-@implementation MockDataManager
+@implementation MockMapDataManager
 
 - (void) fetchISSLocation: (void (^)(ISSLocationResponse *response)) successBlock onFailure: (void (^)(NSError *)) failureBlock {
     NSString *url = [[NSBundle mainBundle] pathForResource:@"iss-now" ofType:@"json"];
