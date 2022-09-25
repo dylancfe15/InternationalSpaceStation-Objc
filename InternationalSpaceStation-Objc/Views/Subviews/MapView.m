@@ -16,6 +16,8 @@
         self.translatesAutoresizingMaskIntoConstraints = false;
         self.delegate = self;
 
+        _shouldFocusOnISS = YES;
+
         _annotation = [MKPointAnnotation alloc];
         _annotation.title = @"International Space Station";
 
@@ -43,7 +45,20 @@
 
             weakSelf.annotation.coordinate = coordinate;
         }];
+
+        [self focusOnISS];
     });
+}
+
+- (void) focusOnISS {
+    if (_shouldFocusOnISS == NO) {
+        return;
+    }
+
+    MKCoordinateSpan span = MKCoordinateSpanMake(1, 1);
+    MKCoordinateRegion region = MKCoordinateRegionMake(_annotation.coordinate, span);
+
+    [self setRegion:region animated:YES];
 }
 
 - (MKAnnotationView *)mapView:(MKMapView *)mapView viewForAnnotation:(id<MKAnnotation>)annotation {

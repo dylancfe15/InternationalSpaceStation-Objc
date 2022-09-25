@@ -12,6 +12,7 @@
 
 @interface MapView: MKMapView<MapViewUpdatable, MKMapViewDelegate>
 
+@property BOOL shouldFocusOnISS;
 @property MKPointAnnotation *annotation;
 
 @end
