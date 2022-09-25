@@ -18,21 +18,19 @@ UIButton *focusButton;
     [super viewDidLoad];
 
     [self configureUI];
+
+    viewModel = [MapViewModel alloc];
+
+    [viewModel fetchISSLocation:^(ISSLocationResponse *response) {
+        [self.mapView updateLocation:response];
+    } onFailure:^(NSError *error) {
+        // TODO: Handle error
+    }];
 }
 
 - (void)configureUI {
-    [self.view addSubview: _mapView];
-    [self.view addSubview: focusButton];
-
     // MapView
     _mapView = [[MapView alloc] init];
-
-    [NSLayoutConstraint activateConstraints: @[
-        [_mapView.topAnchor constraintEqualToAnchor: self.view.topAnchor],
-        [_mapView.leadingAnchor constraintEqualToAnchor: self.view.leadingAnchor],
-        [_mapView.bottomAnchor constraintEqualToAnchor: self.view.bottomAnchor],
-        [_mapView.trailingAnchor constraintEqualToAnchor: self.view.trailingAnchor]
-    ]];
 
     // FocusButton
     focusButton = [UIButton buttonWithType:UIButtonTypeCustom];
@@ -44,20 +42,20 @@ UIButton *focusButton;
     focusButton.layer.shadowRadius = 10;
     [focusButton addTarget:self action:@selector(didFocusButtonOnTap:) forControlEvents:UIControlEventTouchUpInside];
 
+    [self.view addSubview: _mapView];
+    [self.view addSubview: focusButton];
+
     [NSLayoutConstraint activateConstraints: @[
+        [_mapView.topAnchor constraintEqualToAnchor: self.view.topAnchor],
+        [_mapView.leadingAnchor constraintEqualToAnchor: self.view.leadingAnchor],
+        [_mapView.bottomAnchor constraintEqualToAnchor: self.view.bottomAnchor],
+        [_mapView.trailingAnchor constraintEqualToAnchor: self.view.trailingAnchor],
+
         [focusButton.widthAnchor constraintEqualToConstant:44],
         [focusButton.heightAnchor constraintEqualToConstant:44],
         [focusButton.bottomAnchor constraintEqualToAnchor:self.view.bottomAnchor constant:-75],
         [focusButton.trailingAnchor constraintEqualToAnchor:self.view.trailingAnchor constant:-16]
     ]];
-
-    viewModel = [MapViewModel alloc];
-
-    [viewModel fetchISSLocation:^(ISSLocationResponse *response) {
-        [self.mapView updateLocation:response];
-    } onFailure:^(NSError *error) {
-        // TODO: Handle error
-    }];
 }
 
 - (void) didFocusButtonOnTap:(id)sender {
