@@ -10,6 +10,14 @@
 
 @implementation MapViewModel
 
+- (void) fetchISSLocationRepeatly: (void (^)(ISSLocationResponse *response)) successBlock onFailure: (void (^) (NSError *)) failureBlock {
+    [NSTimer scheduledTimerWithTimeInterval:2 repeats:YES block:^(NSTimer * _Nonnull timer) {
+        __weak typeof(self) weakSelf = self;
+
+        [weakSelf fetchISSLocation:successBlock onFailure:failureBlock];
+    }];
+}
+
 - (void) fetchISSLocation:(void (^)(ISSLocationResponse *))successBlock onFailure:(void (^)(NSError *))failureBlock {
     _dataManager = [MapDataManager alloc];
 

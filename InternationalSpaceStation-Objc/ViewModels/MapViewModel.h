@@ -12,6 +12,7 @@
 
 @property MapDataManager *dataManager;
 
+- (void) fetchISSLocationRepeatly: (void (^)(ISSLocationResponse *response)) successBlock onFailure: (void (^) (NSError *)) failureBlock;
 - (void) fetchISSLocation: (void (^)(ISSLocationResponse * response)) successBlock onFailure: (void (^) (NSError *)) failureBlock;
 
 @end

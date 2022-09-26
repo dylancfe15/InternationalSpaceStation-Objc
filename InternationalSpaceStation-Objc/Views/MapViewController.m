@@ -21,7 +21,7 @@ UIButton *focusButton;
 
     viewModel = [MapViewModel alloc];
 
-    [viewModel fetchISSLocation:^(ISSLocationResponse *response) {
+    [viewModel fetchISSLocationRepeatly:^(ISSLocationResponse *response) {
         [self.mapView updateLocation:response];
     } onFailure:^(NSError *error) {
         // TODO: Handle error
