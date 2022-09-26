@@ -6,7 +6,6 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "ISSLocationResponse.h"
 #import "MapDataManager.h"
 
 @interface MapViewModel: NSObject

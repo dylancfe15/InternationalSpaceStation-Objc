@@ -34,7 +34,7 @@ XCTestExpectation *expectation;
         XCTAssertEqual(response.message, @"success");
 
         [expectation fulfill];
-    } onFailure:^(NSError *) {
+    } onFailure:^(NSError *error) {
 
     }];
 

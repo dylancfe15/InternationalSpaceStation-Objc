@@ -18,9 +18,9 @@
 		D5E39BF028DFFBC2002F6F9C /* ISSLocationResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = D5E39BEF28DFFBC2002F6F9C /* ISSLocationResponse.m */; };
 		D5E39BF428E00A1C002F6F9C /* MapViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D5E39BF328E00A1C002F6F9C /* MapViewModel.m */; };
 		D5E39BFC28E0E596002F6F9C /* iss-now.json in Resources */ = {isa = PBXBuildFile; fileRef = D5E39BFB28E0E596002F6F9C /* iss-now.json */; };
-		D5E39BFD28E0E5A1002F6F9C /* MapDataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = D5E39BF728E00C98002F6F9C /* MapDataManager.m */; };
 		D5E39C0128E0E688002F6F9C /* MockMapDataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = D5E39C0028E0E688002F6F9C /* MockMapDataManager.m */; };
 		D5E39C0328E0EC31002F6F9C /* MockMapDataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = D5E39C0028E0E688002F6F9C /* MockMapDataManager.m */; };
+		D5E39C0428E14870002F6F9C /* MapDataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = D5E39BF728E00C98002F6F9C /* MapDataManager.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -202,8 +202,8 @@
 		D5E39BFE28E0E5B5002F6F9C /* DataManagers */ = {
 			isa = PBXGroup;
 			children = (
-				D5E39C0028E0E688002F6F9C /* MockMapDataManager.m */,
 				D5E39C0228E0EBDF002F6F9C /* MockMapDataManager.h */,
+				D5E39C0028E0E688002F6F9C /* MockMapDataManager.m */,
 			);
 			path = DataManagers;
 			sourceTree = "<group>";
@@ -340,6 +340,7 @@
 			files = (
 				D5E39BF428E00A1C002F6F9C /* MapViewModel.m in Sources */,
 				D5E39BBA28DC1464002F6F9C /* MapViewController.m in Sources */,
+				D5E39C0428E14870002F6F9C /* MapDataManager.m in Sources */,
 				D5E39BB428DC1464002F6F9C /* AppDelegate.m in Sources */,
 				D5E39BC528DC1466002F6F9C /* main.m in Sources */,
 				D5E39C0328E0EC31002F6F9C /* MockMapDataManager.m in Sources */,
@@ -353,7 +354,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D5E39BFD28E0E5A1002F6F9C /* MapDataManager.m in Sources */,
 				D5E39C0128E0E688002F6F9C /* MockMapDataManager.m in Sources */,
 				D5E39BCF28DC1466002F6F9C /* InternationalSpaceStation_ObjcTests.m in Sources */,
 			);
