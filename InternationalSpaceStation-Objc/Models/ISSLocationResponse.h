@@ -9,10 +9,10 @@
 
 @interface ISSLocationResponse: NSObject
 
-@property (nonatomic, strong) NSString *latitude;
-@property (nonatomic, strong) NSString *longitude;
-@property (nonatomic, strong) NSString *message;
-@property (nonatomic, strong) NSNumber *timestamp;
+@property NSString *latitude;
+@property NSString *longitude;
+@property NSString *message;
+@property NSNumber *timestamp;
 
 - (id) initWithDictionary: (NSDictionary*) dictionary;
 
