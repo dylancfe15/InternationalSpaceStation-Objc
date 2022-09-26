@@ -33,6 +33,19 @@
     return self;
 }
 
+- (void) focusOnISS {
+    if (_shouldFocusOnISS == NO) {
+        return;
+    }
+
+    MKCoordinateSpan span = MKCoordinateSpanMake(1, 1);
+    MKCoordinateRegion region = MKCoordinateRegionMake(_annotation.coordinate, span);
+
+    [self setRegion:region animated:YES];
+}
+
+// MARK: - MapViewUpdatable
+
 - (void) updateLocation:(nonnull ISSLocationResponse *)response {
     double latitude = [response.latitude doubleValue];
     double longitude = [response.longitude doubleValue];
@@ -50,16 +63,7 @@
     });
 }
 
-- (void) focusOnISS {
-    if (_shouldFocusOnISS == NO) {
-        return;
-    }
-
-    MKCoordinateSpan span = MKCoordinateSpanMake(1, 1);
-    MKCoordinateRegion region = MKCoordinateRegionMake(_annotation.coordinate, span);
-
-    [self setRegion:region animated:YES];
-}
+// MARK: - MKMapViewDelegate
 
 - (MKAnnotationView *)mapView:(MKMapView *)mapView viewForAnnotation:(id<MKAnnotation>)annotation {
     NSString *reuseIdentifier = @"space_station";
