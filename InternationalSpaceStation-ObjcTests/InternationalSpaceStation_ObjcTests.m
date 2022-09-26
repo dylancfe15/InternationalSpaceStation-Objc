@@ -31,7 +31,7 @@ XCTestExpectation *expectation;
     expectation = [self expectationWithDescription:@"expectation"];
 
     [viewModel fetchISSLocation:^(ISSLocationResponse *response) {
-        XCTAssertEqual(response.message, @"success");
+        XCTAssertNotNil(response);
 
         [expectation fulfill];
     } onFailure:^(NSError *error) {
